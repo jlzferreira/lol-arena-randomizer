@@ -27,7 +27,7 @@ function shuffleArray(array) {
 
 function sortTeam(){
 
-    if(champions.length < 2){
+    if(champions.length < 1){
         return alert('SEM MAIS CAMPEÕES PARA FORMAR TIMES')
     }
 

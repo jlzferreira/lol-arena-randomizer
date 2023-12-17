@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOL ARENA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>SORTEADOR ARENA LOL</h1>
+
+    <h2>JOGADORES</h2>
+    <div class="players">
+    <ul>
+        <li>
+            <p>Jogador 1</p>
+            <input type="text" id="player-1">
+        </li>
+        <li>
+            <p>Jogador 2</p>
+            <input type="text" id="player-2">
+        </li>
+        <li>
+            <p>Jogador 3</p>
+            <input type="text" id="player-3">
+        </li>
+        <li>
+            <p>Jogador 4</p>
+            <input type="text" id="player-4">
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <p>Jogador 5</p>
+            <input type="text" id="player-5">
+        </li>
+        <li>
+            <p>Jogador 6</p>
+            <input type="text" id="player-6">
+        </li>
+        <li>
+            <p>Jogador 7</p>
+            <input type="text" id="player-7">
+        </li>
+        <li>
+            <p>Jogador 8</p>
+            <input type="text" id="player-8">
+        </li>
+    </ul>
+</div>
+
+<div class="check-repeat">
+    <h3>NÃO REPETIR CAMPEÕES:</h3>
+    <input type="checkbox" id="repeat-game" size="20"> À CADA JOGO <br>
+    <input type="checkbox" id="repeat-lobby"> À CADA LOBBY
+</div>
+
+<div class="center">
+<input type="button" value="SORTEAR" class="generate" id="generate" onclick="sortTeam();">
+</div>  
+    
+<section class="teams">
+
+    <div class="team-box">
+        <h2>TIME 1</h1>
+        <div class="player-box">
+            <p id="p1-name"></p>
+            <img src="" id="p1-champ">
+        </div>
+        <div class="player-box">
+            <p id="p2-name"></p>
+            <img src="" id="p2-champ">
+        </div>
+    </div>
+
+    <div class="team-box">
+        <h2>TIME 2</h1>
+        <div class="player-box">
+            <p id="p3-name"></p>
+            <img src="" id="p3-champ">
+        </div>
+        <div class="player-box">
+            <p id="p4-name"></p>
+            <img src="" id="p4-champ">
+        </div>
+    </div>
+
+    <div class="team-box">
+        <h2>TIME 3</h1>
+        <div class="player-box">
+            <p id="p5-name"></p>
+            <img src="" id="p5-champ">
+        </div>
+        <div class="player-box">
+            <p id="p6-name"></p>
+            <img src="" id="p6-champ">
+        </div>
+    </div>
+
+    <div class="team-box">
+        <h2>TIME 4</h1>
+        <div class="player-box">
+            <p id="p7-name"></p>
+            <img src="" id="p7-champ">
+        </div>
+        <div class="player-box">
+            <p id="p8-name"></p>
+            <img src="" id="p8-champ">
+        </div>
+    </div>
+    
+</section>
+
+
+</body>
+</html>

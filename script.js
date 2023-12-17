@@ -25,6 +25,10 @@ function shuffleArray(array) {
 
 function sortTeam(){
 
+    if(champions.length < 2){
+        return alert('SEM MAIS CAMPEÕES PARA FORMAR TIMES')
+    }
+
     // DEFINE PLAYERS INPUT
     var pInput = []
 
@@ -68,12 +72,22 @@ function sortChampions(){
     var repeatGame = document.getElementById("repeat-game").checked
     var repeatLobby = document.getElementById("repeat-lobby").checked
 
-    console.log(repeatGame)
-
     var deleteChampions = []
 
     for(var i = 0; i < 8; i++){
         var randomChamp = getRandomInt(champions.length)
+
+        if(i%2 != 0){
+            teamPartner = document.getElementById(playerChampion[i-1]).src
+            atualChamp = window.location.origin + "/images/" + champions[randomChamp]
+
+           // console.log("PART" + teamPartner + "<br>ATUAL:" +atualChamp)
+
+            while(teamPartner == atualChamp){
+                randomChamp = getRandomInt(champions.length)
+                atualChamp = window.location.origin + "images/" + champions[randomChamp]
+            }
+        }
 
         var imgChamp = document.getElementById(playerChampion[i])
 
@@ -81,7 +95,6 @@ function sortChampions(){
 
         if(repeatGame == true){
             champions.splice(randomChamp,1)
-            console.log(champions.length)
         }else{
             deleteChampions.push(randomChamp)
         }
@@ -94,7 +107,6 @@ function sortChampions(){
 }
 
 function removeChampionFromPick(chp){
-    console.log(chp)
     let i = 0
     while(chp[i]){
         champions.splice(chp[i],1)

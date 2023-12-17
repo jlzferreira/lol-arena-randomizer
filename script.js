@@ -6,6 +6,8 @@ var champions = ['Aatrox.png', 'Ahri.png', 'Akali.png', 'Akshan.png', 'Alistar.p
 var playerChampion = ['p1-champ', 'p2-champ', 'p3-champ', 'p4-champ', 'p5-champ', 'p6-champ', 'p7-champ', 'p8-champ']
 
 
+
+
 // Function to shuffle the array content
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -74,14 +76,12 @@ function sortChampions(){
 
     var deleteChampions = []
 
-    for(var i = 0; i < 8; i++){
+    for(let i = 0; i < 8; i++){
         var randomChamp = getRandomInt(champions.length)
 
         if(i%2 != 0){
             teamPartner = document.getElementById(playerChampion[i-1]).src
             atualChamp = window.location.origin + "/images/" + champions[randomChamp]
-
-           // console.log("PART" + teamPartner + "<br>ATUAL:" +atualChamp)
 
             while(teamPartner == atualChamp){
                 randomChamp = getRandomInt(champions.length)
@@ -107,10 +107,9 @@ function sortChampions(){
 }
 
 function removeChampionFromPick(chp){
-    let i = 0
-    while(chp[i]){
-        champions.splice(chp[i],1)
-        i++;
-    }
-    
+
+    champions = champions.filter((value, index) => {
+        return !chp.includes(index);
+      })
+
 }

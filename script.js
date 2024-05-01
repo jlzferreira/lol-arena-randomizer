@@ -42,6 +42,15 @@ function sortTeam(){
     pInput[5] =  document.getElementById("player-6").value
     pInput[6] =  document.getElementById("player-7").value
     pInput[7] =  document.getElementById("player-8").value
+    
+    pInput[8] =  document.getElementById("player-9").value
+    pInput[9] =  document.getElementById("player-10").value
+    pInput[10] =  document.getElementById("player-11").value
+    pInput[11] =  document.getElementById("player-12").value
+    pInput[12] =  document.getElementById("player-13").value
+    pInput[13] =  document.getElementById("player-14").value
+    pInput[14] =  document.getElementById("player-15").value
+    pInput[15] =  document.getElementById("player-16").value
 
     //DEFINE TEAM NAME SHOW
     var pNames = []
@@ -54,6 +63,15 @@ function sortTeam(){
     pNames[5] = document.getElementById("p6-name")
     pNames[6] = document.getElementById("p7-name")
     pNames[7] = document.getElementById("p8-name")
+
+    pNames[8] = document.getElementById("p9-name")
+    pNames[9] = document.getElementById("p10-name")
+    pNames[10]= document.getElementById("p11-name")
+    pNames[11] = document.getElementById("p12-name")
+    pNames[12] = document.getElementById("p13-name")
+    pNames[13] = document.getElementById("p14-name")
+    pNames[14] = document.getElementById("p15-name")
+    pNames[15] = document.getElementById("p16-name")
 
     var randomTeams = shuffleArray(pInput);
 

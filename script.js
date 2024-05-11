@@ -75,7 +75,7 @@ function sortTeam(){
 
     var randomTeams = shuffleArray(pInput);
 
-    for(var i = 0; i < 8; i++){
+    for(var i = 0; i < 16; i++){
         pNames[i].innerHTML = pInput[i]
     }
 
@@ -94,7 +94,7 @@ function sortChampions(){
 
     var deleteChampions = []
 
-    for(let i = 0; i < 8; i++){
+    for(let i = 0; i < 16; i++){
         var randomChamp = getRandomInt(champions.length)
 
         if(i%2 != 0){
